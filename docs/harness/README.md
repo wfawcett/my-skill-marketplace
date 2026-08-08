@@ -1,4 +1,4 @@
-# CHG Coding Harness — Design Notes
+# Coding Harness — Design Notes
 
 This folder is the working record of a design conversation about building an
 "AI SDLC" coding harness on top of Claude Code for CHG's engineering org. It
