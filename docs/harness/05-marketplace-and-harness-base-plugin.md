@@ -1,9 +1,9 @@
-# Internal plugin marketplace and `chg-base`
+# Internal plugin marketplace and `harness-base`
 
 ## The plan
 
 Stand up a Claude Code marketplace to host CHG's own plugins (hooks,
-subagents, skills, etc.). A `chg-base` plugin carries the company's
+subagents, skills, etc.). A `harness-base` plugin carries the company's
 universal pieces — e.g. a security-audit skill, subagents that default to
 Haiku. Update the plugin in one place, propagate it to every team. Teams opt
 in by adding `extraKnownMarketplaces` and `enabledPlugins` to their repo's
@@ -17,7 +17,7 @@ devs.
 A plugin is a self-contained directory that can bundle: skills, agents
 (subagents), hooks, MCP servers, LSP servers, and monitors, described by an
 optional `.claude-plugin/plugin.json` manifest. Relevant details for
-designing `chg-base`:
+designing `harness-base`:
 
 - **Skills** live in `skills/<name>/SKILL.md`, auto-discovered on install.
 - **Agents** (subagents) live in `agents/*.md` with frontmatter (`name`,
@@ -49,10 +49,10 @@ designing `chg-base`:
 **CLAUDE.md → Hooks → Skills → Plugins → MCP servers**, with LSP
 integrations and subagents as later/advanced additions. Get the foundations
 solid in individual repos before over-investing in the distribution
-mechanism — `chg-base` should stay genuinely sparse rather than becoming the
+mechanism — `harness-base` should stay genuinely sparse rather than becoming the
 place foundational work gets deferred to.
 
-## `chg-base` v1 contents
+## `harness-base` v1 contents
 
 See `07-v1-harness-plan.md` for the full scoped list. Summary:
 
@@ -67,6 +67,6 @@ diff enforcement. These wait for pilot signal.
 
 ## Governance loop
 
-Monthly lead-dev meeting evolves `chg-base` content. See `06-governance.md`
+Monthly lead-dev meeting evolves `harness-base` content. See `06-governance.md`
 for the recommended cadence structure and who else might need a seat at that
 table.

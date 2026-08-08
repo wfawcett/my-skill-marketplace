@@ -14,14 +14,14 @@ settings, the marketplace, and permissions. They also name an emerging role
 — "agent manager," a hybrid PM/engineer function managing the Claude Code
 ecosystem.
 
-**William Fawcett is the DRI for the CHG harness** — owns `chg-base`, the
+**William Fawcett is the DRI for the CHG harness** — owns `harness-base`, the
 hooks, the conventions, and the go/no-go on what graduates from pilot to
 org-wide.
 
 ## Committee structure
 
 Monthly meeting with lead devs to evolve the harness (standards content,
-`chg-base` plugin contents, pilot go/no-go decisions).
+`harness-base` plugin contents, pilot go/no-go decisions).
 
 **Worth adding:** a security/compliance seat, not just engineering leads.
 Anthropic's guidance for regulated industries specifically recommends
@@ -48,6 +48,6 @@ this isn't optional polish.
 ## What "done" looks like for a harness change
 
 Not formally defined yet — see `99-open-questions.md`. At minimum, changes
-to `chg-base` or shared hooks should go through the same review the
+to `harness-base` or shared hooks should go through the same review the
 committee applies to any shared infrastructure, with the DRI as final
 approver.

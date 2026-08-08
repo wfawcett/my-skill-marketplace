@@ -17,7 +17,7 @@ it at once. Several pieces below are explicitly "pilot on one repo," not
   Zero custom building — covers all three language stacks (JS, TS, Python).
   See `04-lsp-and-code-navigation.md`.
 
-## Layer 2: `chg-base` plugin v1 (sparse, on purpose)
+## Layer 2: `harness-base` plugin v1 (sparse, on purpose)
 
 - **`temporal-determinism` skill** — the non-deterministic-API tripwires for
   Temporal workflow code. Prioritized because it's a correctness hazard
@@ -31,7 +31,7 @@ it at once. Several pieces below are explicitly "pilot on one repo," not
   No predictive complexity tagging yet — that's v2, once there's real
   failure data to tune it against. See `03-model-routing.md`.
 
-Nothing else goes into `chg-base` yet — no Graphify, no mutation testing, no
+Nothing else goes into `harness-base` yet — no Graphify, no mutation testing, no
 coverage-diff enforcement.
 
 ## Layer 3: Two narrow pilots, one repo each (not org-wide)

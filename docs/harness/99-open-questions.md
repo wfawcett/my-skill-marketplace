@@ -20,7 +20,7 @@ conversation, not a backlog with assigned owners.
    Decision: build the supplementary test-file-lock hook (`PreToolUse` deny
    on Edit/Write to locked test paths) regardless of any future Probity
    pilot — it's a separate problem Probity doesn't address. Not yet built.
-3. **Plugin version pinning policy.** Does `chg-base` ship with a pinned
+3. **Plugin version pinning policy.** Does `harness-base` ship with a pinned
    version in each consuming repo's config (safe, but requires an explicit
    "please update" push from the DRI), or float to latest (true one-place-
    update propagation, but silent drift risk if nobody's watching)? This
@@ -51,7 +51,7 @@ conversation, not a backlog with assigned owners.
 
 ## Bigger, not-yet-scoped questions
 
-- What does "done" look like for a change to `chg-base` or a shared hook —
+- What does "done" look like for a change to `harness-base` or a shared hook —
   does it go through a lightweight review, and who's the second approver
   besides the DRI?
 - How does the rule/config health review (quarterly-ish, see

@@ -55,10 +55,10 @@ install `pyright-lsp` and `typescript-lsp` org-wide.
    every dev machine and CI image. This is DRI-owned infrastructure work,
    not a one-click install.
 2. **Only one LSP server can claim a given file extension, first-registered
-   wins, silently.** If `chg-base` ever ships its own `.lsp.json` for a
+   wins, silently.** If `harness-base` ever ships its own `.lsp.json` for a
    language the official marketplace already covers, and a team also
    installs the official plugin, whichever loads first wins with no error
-   shown. Decision: **don't bundle LSP config in `chg-base` for anything the
+   shown. Decision: **don't bundle LSP config in `harness-base` for anything the
    official marketplace already serves.** Only write custom `.lsp.json` for
    genuinely uncovered languages/tools.
 

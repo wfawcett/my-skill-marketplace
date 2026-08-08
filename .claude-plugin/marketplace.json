@@ -1,12 +1,12 @@
 {
-  "name": "chg-base-marketplace",
+  "name": "harness-base-marketplace",
   "owner": {
     "name": "William Fawcett"
   },
   "plugins": [
     {
-      "name": "chg-base",
-      "source": "./plugins/chg-base",
+      "name": "harness-base",
+      "source": "./plugins/harness-base",
       "description": "CHG harness baseline: shared skills, subagents, and hooks for AI-assisted development.",
       "version": "0.1.0",
       "author": {

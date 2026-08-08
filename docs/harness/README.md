@@ -68,8 +68,8 @@ Rough mapping to the seven pillars:
   the escalation design so cheap-by-default doesn't mean bad-on-hard-tasks.
 - `04-lsp-and-code-navigation.md` — LSP plugins for our actual stack, and
   where a cross-repo knowledge graph (Graphify) would vs. wouldn't help.
-- `05-marketplace-and-chg-base-plugin.md` — the internal plugin marketplace
-  plan and what the `chg-base` plugin should and shouldn't contain at launch.
+- `05-marketplace-and-harness-base-plugin.md` — the internal plugin marketplace
+  plan and what the `harness-base` plugin should and shouldn't contain at launch.
 - `06-governance.md` — the DRI model, committee structure, and the two
   separate review cadences (standards content vs. rule/config health).
 - `07-v1-harness-plan.md` — the concrete, intentionally narrow v1 scope,

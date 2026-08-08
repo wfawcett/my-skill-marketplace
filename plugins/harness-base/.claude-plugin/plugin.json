@@ -1,5 +1,5 @@
 {
-  "name": "chg-base",
+  "name": "harness-base",
   "description": "CHG harness baseline: shared skills, subagents, and hooks for AI-assisted development.",
   "version": "0.1.0",
   "author": {
