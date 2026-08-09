@@ -8,7 +8,7 @@
       "name": "harness-base",
       "source": "./plugins/harness-base",
       "description": "CHG harness baseline: shared skills, subagents, and hooks for AI-assisted development.",
-      "version": "0.3.1",
+      "version": "0.4.0",
       "author": {
         "name": "William Fawcett"
       }
