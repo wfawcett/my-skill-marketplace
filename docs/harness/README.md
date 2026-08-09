@@ -58,6 +58,10 @@ Rough mapping to the seven pillars:
 
 ## Contents of this folder
 
+- `00-harness-taxonomy.md` — standardized eight-layer vocabulary for harness
+  components, reconciling three ad-hoc breakdowns raised in conversation.
+  Reference doc, not new design — read this to get shared terms before the
+  rest of the folder.
 - `01-workflow-standardization.md` — Spec-Kit vs. Superpowers, and the
   combined pattern (via the `superspec` bridge) that resolves the tension
   between execution speed and audit-trail durability.
