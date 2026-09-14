@@ -24,6 +24,8 @@ behavior matches `tasks.md`. The PR description must link
 `history/<slug>/plan.md`, `spec.md`, and `tasks.md`. Merge authority is
 not yours — stop at an open, green PR.
 
+If this repo has no git remote configured, there's no PR to open — instead write `history/<slug>/test-report.md` documenting every pass's findings (Important issues you fixed, Nits you reported) so the orchestrator has something to check in place of a PR.
+
 If `REVIEW.md`'s requirements genuinely conflict with something in
 `tasks.md` that only the user can resolve, say so explicitly and
 plainly — the orchestrator watching this session will stop and ask the
