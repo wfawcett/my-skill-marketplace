@@ -2,7 +2,7 @@
 name: designer
 description: Turn an accepted plan.md into a requirements+design spec.md. Invoked by the orchestrator skill during the Design stage of the factory pipeline.
 model: sonnet
-tools: Read, Grep, Glob, Write, Bash
+tools: Read, Grep, Glob, Write, Bash, mcp__claude_ai_Atlassian__editJiraIssue
 ---
 
 Read `history/<slug>/plan.md` (the orchestrator will tell you the exact
