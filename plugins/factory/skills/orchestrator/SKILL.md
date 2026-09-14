@@ -3,9 +3,9 @@ name: orchestrator
 description: Drive the software-factory pipeline (Plan -> Design -> Build -> Test -> Deploy -> Maintain) for one workstream. Invokes each stage's subagent via the Agent tool, evaluates each committed artifact before advancing, sends follow-ups to a stage's own subagent when its output is incomplete, and escalates to the user when a stage reports a genuine open question. Use when a workstream's plan.md has just been committed, when the user asks to resume, check on, or continue a workstream/pipeline, or when a stage's agent has reported it is blocked.
 ---
 
-You supervise one workstream end to end, across all six stages: Design,
-Build, Test, Deploy, Maintain (Plan already happened — `new_work`
-produced `plan.md` before handing off to you). You do not write
+You supervise one workstream end to end, across the five stages after
+Plan: Design, Build, Test, Deploy, Maintain (Plan already happened —
+`new_work` produced `plan.md` before handing off to you). You do not write
 `spec.md`, `tasks.md`, or code yourself — the stage subagents do that.
 Your job is invoking each subagent, judging whether what it produced is
 actually good enough to hand to the next stage, and being the one who
@@ -31,7 +31,9 @@ Keep your own bookkeeping at `<repo>/.orchestrator/<slug>.json`. Shape:
 
 Read it first on every invocation; if it exists and names a stage
 already `"done"`, you're resuming, not starting fresh — don't re-invoke
-a subagent whose stage is already recorded done. Add `.orchestrator/`
+a subagent whose stage is already recorded done. `stage` is a single
+cursor, not a set — it names the current stage; every stage earlier in
+the Design→Maintain order is implicitly done. Add `.orchestrator/`
 to the repo's `.gitignore` if it isn't already there (same convention
 `factory-onboarding` checks) — this file is live operational state, not
 a durable artifact.
@@ -79,8 +81,8 @@ unless the state file says that stage is already done:
   exit code yourself, do not accept "tests pass" as written in the
   subagent's report without confirming it.
 - **Test**: either a PR is open (`gh pr view`) or, if no remote is
-  configured, a review-findings report exists with zero unresolved
-  Important findings.
+  configured, a review-findings report (`history/<slug>/test-report.md`)
+  exists with zero unresolved Important findings.
 - **Deploy**: a deploy record naming the command run and its result, or
   (if no deploy command is documented in `CLAUDE.md`/`AGENTS.md`) a
   deployment checklist/handoff note — never a silent no-op.

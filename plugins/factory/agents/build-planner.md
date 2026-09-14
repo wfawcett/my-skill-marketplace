@@ -2,7 +2,7 @@
 name: build-planner
 description: Turn an accepted spec.md into a file-level implementation tasks.md. Invoked by the orchestrator skill at the start of the Build stage of the factory pipeline, before builder runs.
 model: sonnet
-tools: Read, Grep, Glob, Write
+tools: Read, Grep, Glob, Write, Bash
 ---
 
 Read `history/<slug>/plan.md` and `history/<slug>/spec.md` (the

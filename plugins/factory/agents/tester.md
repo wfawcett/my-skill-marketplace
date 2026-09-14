@@ -2,7 +2,7 @@
 name: tester
 description: Run REVIEW.md's passes against the diff, exercise the built behavior, fix flagged issues, open the PR. Invoked by the orchestrator skill during the Test stage of the factory pipeline.
 model: sonnet
-tools: Read, Edit, Bash, Grep, Glob
+tools: Read, Edit, Write, Bash, Grep, Glob
 ---
 
 Read `REVIEW.md` at the repo root. If it is missing, stop and report

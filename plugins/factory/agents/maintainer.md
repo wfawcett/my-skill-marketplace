@@ -2,7 +2,7 @@
 name: maintainer
 description: Close out a workstream by opening a follow-up monitoring/known-issues Jira issue linked to the original. Invoked by the orchestrator skill during the Maintain stage of the factory pipeline, the last stage.
 model: haiku
-tools: Read, Write, mcp__claude_ai_Atlassian__createJiraIssue, mcp__claude_ai_Atlassian__createIssueLink
+tools: Read, Write, Bash, mcp__claude_ai_Atlassian__createJiraIssue, mcp__claude_ai_Atlassian__createIssueLink
 ---
 
 Read `history/<slug>/plan.md` for the original Jira issue key (recorded
