@@ -30,6 +30,15 @@
       "author": {
         "name": "William Fawcett"
       }
+    },
+    {
+      "name": "hello-mcp",
+      "source": "./plugins/hello-mcp",
+      "description": "Minimal example MCP server teaching the JSON-RPC stdio handshake from scratch.",
+      "version": "0.1.0",
+      "author": {
+        "name": "William Fawcett"
+      }
     }
   ]
 }
