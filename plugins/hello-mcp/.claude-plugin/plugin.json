@@ -1,0 +1,14 @@
+{
+  "name": "hello-mcp",
+  "description": "Minimal example MCP server teaching the JSON-RPC stdio handshake from scratch.",
+  "version": "0.1.0",
+  "author": {
+    "name": "William Fawcett"
+  },
+  "mcpServers": {
+    "hello-mcp": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/server.js"]
+    }
+  }
+}
