@@ -12,6 +12,24 @@
       "author": {
         "name": "William Fawcett"
       }
+    },
+    {
+      "name": "factory",
+      "source": "./plugins/factory",
+      "description": "CHG software-factory pipeline: Plan -> Design -> Build -> Test -> Deploy -> Maintain, driven by Claude Code skills and subagents.",
+      "version": "0.1.0",
+      "author": {
+        "name": "William Fawcett"
+      }
+    },
+    {
+      "name": "precompact-handoff",
+      "source": "./plugins/precompact-handoff",
+      "description": "Structured compaction handoff docs: summarizes the transcript via a child `claude -p` call before compaction and reinjects it at the next session start.",
+      "version": "0.1.0",
+      "author": {
+        "name": "William Fawcett"
+      }
     }
   ]
 }

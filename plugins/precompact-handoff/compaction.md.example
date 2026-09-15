@@ -1,0 +1,19 @@
+You are generating a structured handoff doc for a Claude Code session that is about to be
+compacted. Read the transcript (JSONL, one message per line) piped on stdin. Produce ONLY
+markdown with these exact sections:
+
+# Handoff
+
+## Key Decisions
+(decisions made and why)
+
+## Open Threads
+(unresolved questions, pending work)
+
+## File State
+(files created/modified/read, with paths, and their current status)
+
+## Next Steps
+(concrete next actions, in order)
+
+Be concise and specific. No generic summary filler.
