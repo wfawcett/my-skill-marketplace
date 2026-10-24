@@ -46,11 +46,12 @@ fi
 
 HANDOFF_TMP="$HANDOFF_DIR/latest.md.tmp"
 
+CHILD_EXIT=0
 PRECOMPACT_HANDOFF_CHILD=1 claude -p "$PROMPT" \
   --model claude-sonnet-5 \
-  < "$TRANSCRIPT_PATH" > "$HANDOFF_TMP" 2> "$HANDOFF_DIR/logs/last-precompact-stderr.log" || true
+  < "$TRANSCRIPT_PATH" > "$HANDOFF_TMP" 2> "$HANDOFF_DIR/logs/last-precompact-stderr.log" || CHILD_EXIT=$?
 
-if [ -s "$HANDOFF_TMP" ]; then
+if [ "$CHILD_EXIT" -eq 0 ] && [ -s "$HANDOFF_TMP" ]; then
   mv "$HANDOFF_TMP" "$HANDOFF_DIR/latest.md"
   {
     echo "---"
@@ -59,6 +60,10 @@ if [ -s "$HANDOFF_TMP" ]; then
   } >> "$HANDOFF_DIR/latest.md"
 else
   rm -f "$HANDOFF_TMP"
+  {
+    echo "PreCompact handoff summarization FAILED (exit $CHILD_EXIT). latest.md left untouched."
+    date -u +"failed-at: %Y-%m-%dT%H:%M:%SZ"
+  } >> "$HANDOFF_DIR/logs/last-precompact-stderr.log"
 fi
 
 exit 0
